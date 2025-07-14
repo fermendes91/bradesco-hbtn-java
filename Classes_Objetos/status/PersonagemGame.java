@@ -1,31 +1,37 @@
 public class PersonagemGame {
-  public int saudeAtual;
-  public String nome;
+  private int saudeAtual;
+  private String nome;
+  private String status;
   
   public int getSaudeAtual() {
-	  return saudeAtual;
+	return saudeAtual;
   }
-
   public void setSaudeAtual(int saudeAtual) {
-	  this.saudeAtual = saudeAtual;
+	String status = saudeAtual <= 0 ? "morto" : "vivo";
+	this.saudeAtual = saudeAtual;
+	this.status = status;
   }
   
   public String getNome() {
-	  return nome;
+	return nome;
+  }
+  public void setNome(String nome) {
+	this.nome = nome;
+  }
+  
+  public String getStatus() {
+	return this.status;
   }
 
-  public void setNome(String nome) {
-	  this.nome = nome;
-  }
   
   public void tomarDano(int quantidadeDeDano) {
 	  int saudeAtual = this.saudeAtual - quantidadeDeDano;
-	  this.saudeAtual = saudeAtual < 0 ? 0 : saudeAtual;
+	  this.setSaudeAtual(saudeAtual< 0 ? 0 : saudeAtual);
   }
   
   public void receberCura(int quantidadeDeCura) {
 	  int saudeAtual =  this.saudeAtual + quantidadeDeCura;
-	  this.saudeAtual = saudeAtual > 100 ? 100 : saudeAtual;
+	  this.setSaudeAtual(saudeAtual > 100 ? 100 : saudeAtual);
 	  
   }
   
