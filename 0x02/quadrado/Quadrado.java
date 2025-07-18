@@ -4,7 +4,7 @@ public class Quadrado {
 		if (lado > 0) {
 			return lado * lado;
 		}
-		throw new Exception("Lado deve possuir valor positivo");
+		throw new IllegalArgumentException ("Lado deve possuir valor positivo");
 	}
 	
 }
