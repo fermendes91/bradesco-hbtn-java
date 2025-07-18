@@ -1,6 +1,6 @@
 package produtos;
 
-abstract public class Produto {
+public abstract class Produto {
 	
 	private String titulo;
 	private int ano;
