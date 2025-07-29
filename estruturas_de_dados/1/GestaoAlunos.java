@@ -20,7 +20,7 @@ public class GestaoAlunos {
 	}
 	
 	
-	public void exibirAlunos() {
+	public void listarAlunos() {
 		for(Aluno aluno : this.alunos) {
 			System.out.println(aluno.toString());
 		}
