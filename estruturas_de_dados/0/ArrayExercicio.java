@@ -24,7 +24,9 @@ public class ArrayExercicio {
 	        	int opcao = scanner.nextInt();
 	        	conteudoArray = conteudoArray.isEmpty() ? String.valueOf(opcao) : conteudoArray.concat(" " + opcao);
 	        	somaArray += opcao;
-	        	maiorValor = opcao > maiorValor ? opcao : maiorValor;
+	        	if (opcao > maiorValor) {
+	        	    maiorValor = opcao;
+	        	}
 	        	numeros[i] = opcao;
 	        }
 
