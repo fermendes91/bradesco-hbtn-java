@@ -33,8 +33,9 @@ public class Produto {
         return tipo;
     }
 
-    @Override
-    public String toString() {
-        return nome + " " + preco + " " + peso + " " + quantidadeEmEstoque + " " + tipo;
-    }
+public String toString() {
+    return String.format(Locale.getDefault(), "%s %.6f %.6f %d %s",
+        nome, preco, peso, quantidadeEmEstoque, tipo);
+}
+
 }
