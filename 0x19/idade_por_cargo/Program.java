@@ -2,6 +2,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Program {
+	
     public static void main(String[] args) {
         Pessoa pessoa1 = new Pessoa(1, "John Bannins", "Desenvolvedor", 23, 3200);
         Pessoa pessoa2 = new Pessoa(2, "Derry Collier", "Desenvolvedor", 45, 8600);
@@ -17,18 +18,19 @@ public class Program {
         List<Pessoa> todasPessoas = List.of(pessoa1, pessoa2, pessoa3, pessoa4, pessoa5,
             pessoa6, pessoa7, pessoa8, pessoa9, pessoa10);
 
-        Map<String, List<Pessoa>> pessoasPorCargo1 = ConsultaPessoas.obterPessoasPorCargo(todasPessoas);
-        Map<String, List<Pessoa>> pessoasPorCargo2 = ConsultaPessoas.obterPessoasPorCargo(
+        Map<String, List<Integer>> idadesPorCargo1 = ConsultaPessoas.obterIdadePorCargo(todasPessoas);
+        Map<String, List<Integer>> idadesPorCargo2 = ConsultaPessoas.obterIdadePorCargo(
             List.of(pessoa1, pessoa4, pessoa10)
         );
-        Map<String, List<Pessoa>> pessoasPorCargo3 = ConsultaPessoas.obterPessoasPorCargo(
+        Map<String, List<Integer>> idadesPorCargo3 = ConsultaPessoas.obterIdadePorCargo(
             List.of(pessoa4, pessoa9)
         );
 
-        System.out.println(pessoasPorCargo1);
+        System.out.println(idadesPorCargo1);
         System.out.println();
-        System.out.println(pessoasPorCargo2);
+        System.out.println(idadesPorCargo2);
         System.out.println();
-        System.out.println(pessoasPorCargo3);
+        System.out.println(idadesPorCargo3);
     }
+    
 }
