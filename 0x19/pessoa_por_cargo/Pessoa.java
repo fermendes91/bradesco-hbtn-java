@@ -33,8 +33,11 @@ public class Pessoa {
         return salario;
     }
 
-    @Override
-    public String toString() {
-        return "[" + codigo + "] " + nome + " " + cargo + " " + idade + " R$ " + salario;
-    }
+@Override
+public String toString() {
+    return String.format("[%d] %s %s %d R$ %.6f",
+            codigo, nome, cargo, idade, salario)
+            .replace('.', ',');
+}
+
 }
