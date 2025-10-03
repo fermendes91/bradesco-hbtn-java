@@ -35,8 +35,6 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        // Ajuste no formato do salário para evitar muitas casas decimais
-        return String.format("[%d] %s %s %d R$ %.2f",
-                codigo, nome, cargo, idade, salario);
+        return "[" + codigo + "] " + nome + " " + cargo + " " + idade + " R$ " + salario;
     }
 }
